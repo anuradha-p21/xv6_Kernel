@@ -294,6 +294,7 @@ fork(void)
 
   // Cause fork to return 0 in the child.
   np->trapframe->a0 = 0;
+  
   // copy the parent trace mask to the child
   np->trace_mask = p->trace_mask;
 
